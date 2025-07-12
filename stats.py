@@ -1,6 +1,7 @@
 def count_words(book):
     return len(book.split())
 
+
 def count_letters(text):
     text = text.lower()
     result = {}
@@ -12,8 +13,15 @@ def count_letters(text):
     
     return result
 
+
+def get_book_text(file_path):
+    with open(file_path) as f:
+        return f.read()
+
+
 def sort_on(items):
     return items["num"]
+
 
 def sorted_dicts(dict):
     list_dict = []
