@@ -11,3 +11,16 @@ def count_letters(text):
             result[i] = 1
     
     return result
+
+def sort_on(items):
+    return items["num"]
+
+def sorted_dicts(dict):
+    list_dict = []
+    for i in dict:
+        dict_to_list = {}
+        dict_to_list["char"] = i
+        dict_to_list["num"] = dict[i]
+        list_dict.append(dict_to_list)
+    list_dict.sort(reverse=True, key=sort_on)
+    return list_dict
